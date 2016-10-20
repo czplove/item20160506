@@ -92,8 +92,8 @@
  * abstraction on top of the 3 LEDs for verbose coding.
  */
 enum HalBoardLedPins {
-  BOARDLED0 = PORTB_PIN(5),
-  BOARDLED1 = PORTA_PIN(5),
+  BOARDLED0 = PORTB_PIN(3),		//-GÂÌµÆ
+  BOARDLED1 = PORTA_PIN(7),		//-BÀ¶µÆ
   BOARDLED2 = PORTC_PIN(5),
   BOARDLED3 = BOARDLED2,
   BOARD_ACTIVITY_LED  = BOARDLED2,
@@ -1000,7 +1000,7 @@ uint16_t gpioCfgPowerUp[6] = {                                                  
                             ((PWRUP_CFG_TD2      <<PB0_CFG_BIT)|              \
                              (GPIOCFG_OUT_ALT    <<PB1_CFG_BIT)| /* SC1TXD  */\
                              (GPIOCFG_IN_PUD     <<PB2_CFG_BIT)| /* SC1RXD  */\
-                             (GPIOCFG_IN_PUD     <<PB3_CFG_BIT)),/* SC1nCTS */\
+                             (GPIOCFG_OUT     <<PB3_CFG_BIT)),/* SC1nCTS */\
                             ((GPIOCFG_OUT_ALT    <<PB4_CFG_BIT)| /* SC1nRTS */\
                              (GPIOCFG_OUT        <<PB5_CFG_BIT)|              \
                              (GPIOCFG_IN_PUD     <<PB6_CFG_BIT)|              \
@@ -1067,7 +1067,7 @@ uint16_t gpioCfgPowerDown[6] = {                                                
                             ((PWRUP_CFG_TD2      <<PB0_CFG_BIT)|              \
                              (GPIOCFG_OUT_ALT    <<PB1_CFG_BIT)| /* SC1TXD  */\
                              (GPIOCFG_IN_PUD     <<PB2_CFG_BIT)| /* SC1RXD  */\
-                             (GPIOCFG_IN_PUD     <<PB3_CFG_BIT)),/* SC1nCTS */\
+                             (GPIOCFG_OUT     <<PB3_CFG_BIT)),/* SC1nCTS */\
                             ((GPIOCFG_OUT_ALT    <<PB4_CFG_BIT)| /* SC1nRTS */\
                              (GPIOCFG_OUT        <<PB5_CFG_BIT)|              \
                              (GPIOCFG_IN_PUD     <<PB6_CFG_BIT)|              \
