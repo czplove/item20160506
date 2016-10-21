@@ -94,7 +94,7 @@
 enum HalBoardLedPins {
   BOARDLED0 = PORTB_PIN(3),		//-GÂÌµÆ
   BOARDLED1 = PORTA_PIN(7),		//-BÀ¶µÆ
-  BOARDLED2 = PORTC_PIN(5),
+  BOARDLED2 = PORTC_PIN(3),
   BOARDLED3 = BOARDLED2,
   BOARD_ACTIVITY_LED  = BOARDLED2,
   BOARD_HEARTBEAT_LED = BOARDLED0
@@ -721,7 +721,7 @@ enum HalBoardLedPins {
  * trigger to enable the TX_ACTIVE alternate function on PC5.
  * Default is to not enable TX_ACTIVE functionality on PC5.
  */
-//#define ENABLE_ALT_FUNCTION_TX_ACTIVE
+#define ENABLE_ALT_FUNCTION_TX_ACTIVE
 //@} //END OF ENABLE_ALT_FUNCTION_TX_ACTIVE DEFINITIONS
 
 
@@ -743,7 +743,7 @@ enum HalBoardLedPins {
  * trigger to enable the nTX_ACTIVE alternate function on PC6.
  * Default is to not enable nTX_ACTIVE functionality on PC6.
  */
-//#define ENABLE_ALT_FUNCTION_NTX_ACTIVE
+#define ENABLE_ALT_FUNCTION_NTX_ACTIVE
 //@} //END OF ENABLE_ALT_FUNCTION_NTX_ACTIVE DEFINITIONS
 
 /** @name EEPROM_USES_SHUTDOWN_CONTROL
