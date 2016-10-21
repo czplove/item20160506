@@ -17,7 +17,7 @@
 
 //------------------------------------------------------------------------------
 // Plugin private macro definitions
-#define BUTTON_TIMEOUT_MS     EMBER_AF_PLUGIN_BUTTON_INTERFACE_BUTTON_TIMEOUT_MS
+#define BUTTON_TIMEOUT_MS     EMBER_AF_PLUGIN_BUTTON_INTERFACE_BUTTON_TIMEOUT_MS * 6
 #define BUTTON_SHORT_TIMEOUT (EMBER_AF_PLUGIN_BUTTON_INTERFACE_BUTTON_TIMEOUT_MS / 4)
 
 //------------------------------------------------------------------------------

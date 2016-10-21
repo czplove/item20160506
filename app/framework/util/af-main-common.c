@@ -595,6 +595,10 @@ EmberStatus emAfPermitJoin(uint8_t duration,
 {
   EmberStatus status = emberPermitJoining(duration);
   emberAfAppPrintln("pJoin for %d sec: 0x%x", duration, status); 
+  if ((status == EMBER_SUCCESS) && (duration > 1))
+    halLedBlinkBlink(duration,500);
+  else
+    halLedBlinkBlink(1,0);
   if (status == EMBER_SUCCESS && broadcastMgmtPermitJoin) {
     status = broadcastPermitJoin(duration);
   }

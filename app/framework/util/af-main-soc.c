@@ -167,7 +167,6 @@ int emberAfMain(MAIN_FUNCTION_PARAMETERS)
   emAfInitializeMessageSentCallbackArray();
 
   emberAfEndpointConfigure();
-  emberAfMainInitCallback();
 
   emberAfInit();
 
@@ -187,6 +186,8 @@ int emberAfMain(MAIN_FUNCTION_PARAMETERS)
   emberSetMaximumIncomingTransferSize(EMBER_AF_INCOMING_BUFFER_LENGTH);
   emberSetMaximumOutgoingTransferSize(EMBER_AF_MAXIMUM_SEND_PAYLOAD_LENGTH);
   emberSetTxPowerMode(EMBER_AF_TX_POWER_MODE);
+
+  emberAfMainInitCallback();
 
   while(true) {
     halResetWatchdog();   // Periodically reset the watchdog.

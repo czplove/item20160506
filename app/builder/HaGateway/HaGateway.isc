@@ -1,5 +1,5 @@
 #ISD App Configuration:3.1
-# ISD version: 3.3.1985
+# ISD version: 3.3.1959
 #  Identified of a stack descriptor used for this configuration. This should not
 #  be changed manually, unless you really know what you are doing.
 ConfiguratorID:auto-EM35X
@@ -345,7 +345,7 @@ Host:unknown
 Platform:em357
 
 #  Enable callbacks.
-Callbacks:emberAfPluginButtonInterfaceButton0PressingCallback,emberAfPluginButtonInterfaceButton0PressedShortCallback,emberAfStackStatusCallback,
+Callbacks:emberAfPluginButtonInterfaceButton0PressingCallback,emberAfPluginButtonInterfaceButton0PressedShortCallback,emberAfStackStatusCallback,emberAfMainInitCallback,
 
 #  Any customer-specific general purpose custom events.
 CustomEvents:emberAfButton0PressCountEventControl,emberAfButton0PressCountEventHandler
