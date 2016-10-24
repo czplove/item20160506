@@ -61,6 +61,7 @@ void emberAfButton0PressCountEventHandler(void) {
 void emberAfPluginButtonInterfaceButton0PressingCallback(void)
 {
   emberLeaveNetwork();
+  halLedBlinkBlink(1,0);
 }
 
 

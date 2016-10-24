@@ -113,7 +113,7 @@ PGM_P halGetResetString(void);
 // that represent an actual second. This can vary on different platforms.
 // It must be defined by the host system.
 #ifndef MILLISECOND_TICKS_PER_SECOND
-  #define MILLISECOND_TICKS_PER_SECOND 1024UL
+  #define MILLISECOND_TICKS_PER_SECOND 1000UL   //-1024UL
 // See bug 10232
 //  #error "MILLISECOND_TICKS_PER_SECOND is not defined in micro.h!"
 #endif

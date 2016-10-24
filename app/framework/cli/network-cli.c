@@ -207,6 +207,7 @@ void networkLeaveCommand(void)
   status = emberLeaveNetwork();
   UNUSED_VAR(status);
   emberAfAppPrintln("%p 0x%x", "leave",  status);
+  halLedBlinkBlink(1,0);
 }
 
 // network pjoin <time>
