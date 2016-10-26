@@ -82,21 +82,24 @@ void emberAfPluginLedBlinkLedEventFunctionEventHandler( void )
     break;
 
   case LED_BLINKING_ON:
-    turnLedOff(activeLed);
+    //-turnLedOff(activeLed);
     if (ledBlinkCount > 0) {
       if (ledBlinkCount != 255) { // blink forever if count is 255
         ledBlinkCount --;
       }
       if (ledBlinkCount > 0) {
+        //-turnLedOff(activeLed);
         ledEventState = LED_BLINKING_OFF;
         emberEventControlSetDelayMS(emberAfPluginLedBlinkLedEventFunctionEventControl,
                                     ledBlinkTime);
 
       } else {
+        turnLedOff(activeLed);
         ledEventState = LED_OFF;
         emberEventControlSetInactive(emberAfPluginLedBlinkLedEventFunctionEventControl);
       }
     } else {
+      turnLedOff(activeLed);
       ledEventState = LED_BLINKING_OFF;
       emberEventControlSetDelayMS(emberAfPluginLedBlinkLedEventFunctionEventControl,
                                   ledBlinkTime);
